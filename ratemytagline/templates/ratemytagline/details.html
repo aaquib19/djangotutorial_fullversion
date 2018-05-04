@@ -1,0 +1,19 @@
+<head>
+    <title>Tagline Rater</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Eye popping tagline by {{tagline.username}}:</h1>
+            <h2>{{tagline}}</h2>
+            <h3>Upvotes : {{tagline.numberOfVotes}}</h3>
+            <br />
+            <form action="" method="post">
+                {% csrf_token %}
+                <button class='btn btn-primary btn-lg'> I <3 This </button></a>
+            </form>
+        </div>
+
+    </div>
+</body>

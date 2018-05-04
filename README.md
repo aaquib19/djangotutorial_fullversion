@@ -1,0 +1,1 @@
+AIDC Django Tutorial

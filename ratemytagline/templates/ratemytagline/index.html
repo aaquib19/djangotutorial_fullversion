@@ -1,0 +1,28 @@
+<head>
+    <title>Tagline Rater</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-6">
+             <h1>Awesome taglines to steal: </h1>
+            {% if taglines %}
+            <ul>
+                {% for tg in taglines %}
+                <li><a href="/taglines/{{tg.id}}">{{ tg.tagline }}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>I dont see any taglines here... What are you waiting for?</p>
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" name="name" class="form-control" placeholder="My Amazing name" required />
+                <input type="text" name="tagline" class="form-control" placeholder="And my stupendous tagline" required />
+                <button type="submit" class="btn btn-primary">Show it to the World !!!</button>
+            </form>
+        </div>
+    </div>
+</body>
